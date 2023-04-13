@@ -17,7 +17,7 @@
 ---
 
 <a href="https://github.com/wiseupdata/wiseupdata">
-<img align="left" alt="img" src="assets/pyspark.png" width="300" />
+<img align="left" alt="img" src="https://raw.githubusercontent.com/wiseupdata/pyspark-functions/main/assets/pyspark.png" width="300" />
 </a>
 
 <h1>
@@ -33,7 +33,7 @@ Pyspark extra functions ❤️
 <br>
 <br>
 <a href="https://github.com/wiseupdata/wiseupdata">
-<img align="center" alt="img" src="assets/under_construction.gif" width="300" />
+<img align="center" alt="img" src="https://raw.githubusercontent.com/wiseupdata/pyspark-functions/main/assets/under_construction.gif" width="300" />
 </a>
 
 <br>
@@ -44,6 +44,7 @@ Pyspark extra functions ❤️
 
 1. [Wise Up Data](https://github.com/wiseupdata)
 1. [Emojis](https://github.com/wiseupdata/emojis)
+1. [Pypi Deploy](https://www.digitalocean.com/community/tutorials/how-to-publish-python-packages-to-pypi-using-poetry-on-ubuntu-22-04)
 
 <br><br>
 ---
