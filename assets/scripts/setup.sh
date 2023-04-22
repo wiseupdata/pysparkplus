@@ -7,6 +7,7 @@ poetry install
 poetry shell
 
 poetry add pyspark
+poetry add strplus
 
 poetry add --group dev black
 poetry add --group dev isort

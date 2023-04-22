@@ -1,7 +1,7 @@
 import pytest
 from pyspark.sql import SparkSession
 
-from pysparkplus.dataframe import deduplicate
+from pysparkplus.functions import deduplicate
 
 
 @pytest.fixture(scope="session")
@@ -24,11 +24,11 @@ def test_deduplicate(spark, input_dataframe):
     expected_output_columns = ["key_col", "order_col1", "order_col2"]
     expected_output_dataframe = spark.createDataFrame(expected_output_data, expected_output_columns)
 
-    key_columns = ["key_col"]
-    order_columns = ["order_col2"]
+    by_columns = ["key_col"]
+    order_by = ["order_col2"]
 
     # Act
-    actual_output_dataframe = deduplicate(input_dataframe, key_columns, order_columns)
+    actual_output_dataframe = deduplicate(input_dataframe, by_columns, order_by)
 
     # Assert
     assert actual_output_dataframe.collect() == expected_output_dataframe.collect()

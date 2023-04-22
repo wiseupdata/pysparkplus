@@ -62,8 +62,6 @@ Pyspark extra functions ❤️
 
 ### Development on go!
 
-<a href="https://github.com/wiseupdata/wiseupdata">
-<img align="center" alt="img" src="https://raw.githubusercontent.com/wiseupdata/pysparkplus/main/assets/imgs/under_construction.gif" width="200" />
 
 <br>
 

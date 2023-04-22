@@ -8,3 +8,4 @@
 
 ## Main Class: 🚀
 
+::: pysparkplus.functions
