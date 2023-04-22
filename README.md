@@ -13,6 +13,9 @@
 
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=wiseupdata.pysparkplus&left_color=green&right_color=black)
 ![license](https://img.shields.io/github/license/wiseupdata/pysparkplus)
+[![pypi](https://img.shields.io/pypi/v/pysparkplus?color=green)](https://pypi.python.org/pypi/pysparkplus)
+[![downloads](https://pepy.tech/badge/pysparkplus/month)](https://pepy.tech/project/pysparkplus)
+[![versions](https://img.shields.io/pypi/pyversions/pysparkplus.svg)](https://github.com/wiseupdata/pysparkplus)
 
 ---
 
@@ -39,7 +42,7 @@ Pyspark extra functions ❤️
 
 ## Features ✨️
 
-- Wrapper Class
+- Wrapper Class!
 - Simple use!
 - Made with A.I. contribution 🤖 
 
