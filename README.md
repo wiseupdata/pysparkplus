@@ -17,7 +17,7 @@
 ---
 
 <a href="https://github.com/wiseupdata/wiseupdata">
-<img align="left" alt="img" src="https://raw.githubusercontent.com/wiseupdata/pysparkplus/main/assets/pyspark.png" width="300" />
+<img align="left" alt="img" src="https://raw.githubusercontent.com/wiseupdata/pysparkplus/main/assets/imgs/pyspark.png" width="300" />
 </a>
 
 <h1>
@@ -32,19 +32,43 @@ Pyspark extra functions ❤️
 <br>
 <br>
 <br>
-<a href="https://github.com/wiseupdata/wiseupdata">
-<img align="center" alt="img" src="https://raw.githubusercontent.com/wiseupdata/pysparkplus/main/assets/under_construction.gif" width="300" />
+
+[Documentation](https://wiseupdata.github.io/pysparkplus/index.html)  🚀
+
+<br>
+
+## Features ✨️
+
+- Wrapper Class
+- Simple use!
+- Made with A.I. contribution 🤖 
+
+<br>
 </a>
 
 <br>
 <br>
 <br>
 
+* [Documentation and examples! ](https://wiseupdata.github.io/pysparkplus/index.html)! 
+<br>
+<br>
+
+
+<br>
+
+### Development on go!
+
+<a href="https://github.com/wiseupdata/wiseupdata">
+<img align="center" alt="img" src="https://raw.githubusercontent.com/wiseupdata/pysparkplus/main/assets/imgs/under_construction.gif" width="200" />
+
+<br>
+
 # References 🌍 🗄️
 
+1. [Pyspark+](https://wiseupdata.github.io/pysparkplus/index.html)
 1. [Wise Up Data](https://github.com/wiseupdata)
 1. [Emojis](https://github.com/wiseupdata/emojis)
-1. [Pypi Deploy](https://www.digitalocean.com/community/tutorials/how-to-publish-python-packages-to-pypi-using-poetry-on-ubuntu-22-04)
 
 <br><br>
 ---

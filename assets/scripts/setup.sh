@@ -10,7 +10,8 @@ poetry add pyspark
 
 poetry add --group dev black
 poetry add --group dev isort
-poetry add --group dev coverage
+poetry add --group dev pytest-cov
+# poetry add --group dev coverage
 
 poetry add --group dev mkdocs
 poetry add --group dev mkdocstrings[python]

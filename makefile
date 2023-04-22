@@ -33,7 +33,7 @@ htmlclean:
 
 # Generate the documentation
 doc:
-	@rm -Rf docs/strplus
+	@rm -Rf docs/pysparkplus
 	@poetry run python assets/scripts/gen_ref_pages.py
 
 poetry:
@@ -44,5 +44,5 @@ format: black isort
 lint: black-lint isort-lint flake8-lint
 
 #use Example:
-# make path=strplus/functions.py
+# make path=pysparkplus/functions.py
 # make 
