@@ -1,0 +1,74 @@
+:root {
+
+  /* Header */
+  --md-primary-fg-color:        #e92163;
+
+  /* backgroud */
+  --md-default-bg-color: #40413e; 
+
+  /* Main Labels */
+  --md-default-fg-color--light: #e92163;
+
+  
+  /* mouse over */
+  --md-accent-fg-color: rgb(9, 236, 59);
+
+  /* name code */
+  --md-code-fg-color: #adaaaa;
+  
+  /* side name code */
+  --md-default-fg-color: #e92163;
+  
+  /* main texts */
+  --md-typeset-color: #f8f2f5;
+  
+
+  
+  --md-default-fg-color--lightest: #f8f8f2;
+  
+  --md-default-bg-color--light: #3e3d32;
+  --md-default-bg-color--lighter: #75715e;
+  --md-default-bg-color--lightest: #75715e;
+
+  
+  --md-code-bg-color: #272822;
+
+  --md-code-hl-color: #e92163;
+  --md-code-hl-number-color: #ae81ff;
+  --md-code-hl-special-color: #e92163;
+  --md-code-hl-function-color: #a6e22e;
+  --md-code-hl-constant-color: #ae81ff;
+  --md-code-hl-keyword-color: #e92163;
+  --md-code-hl-string-color: #e6db74;
+  --md-code-hl-name-color: #f4f2f8;
+  --md-code-hl-operator-color: #f8f8f2;
+  --md-code-hl-punctuation-color: #f8f8f2;
+  --md-code-hl-comment-color: #75715e;
+  --md-code-hl-generic-color: #f8f8f2;
+  --md-code-hl-variable-color: #f8f8f2;
+
+  
+  --md-typeset-a-color: #e92163;
+  --md-typeset-mark-color: #e92163;
+  --md-typeset-del-color: #75715e;
+  --md-typeset-ins-color: #a6e22e;
+
+  --md-typeset-kbd-color: #f2f8f5;
+  --md-typeset-kbd-accent-color: #ae81ff;
+  --md-typeset-kbd-border-color: #75715e;
+
+  --md-typeset-table-color: #75715e;
+
+
+  /* --md-default-fg-color--lighter: #e1c80f; */
+
+
+}
+
+
+
+
+
+[data-md-color-scheme="test"] {
+  @extend %root;
+}
