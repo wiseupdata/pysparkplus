@@ -11,13 +11,13 @@
   <img align="left" alt="wise Up Data's LinkedIN" width="22px" src="https://raw.githubusercontent.com/wiseupdata/wiseupdata/main/assets/linkedin.png" />
 </a>
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=wiseupdata.pyspark-functions&left_color=green&right_color=black)
-![license](https://img.shields.io/github/license/wiseupdata/pyspark-functions)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=wiseupdata.pysparkplus&left_color=green&right_color=black)
+![license](https://img.shields.io/github/license/wiseupdata/pysparkplus)
 
 ---
 
 <a href="https://github.com/wiseupdata/wiseupdata">
-<img align="left" alt="img" src="https://raw.githubusercontent.com/wiseupdata/pyspark-functions/main/assets/pyspark.png" width="300" />
+<img align="left" alt="img" src="https://raw.githubusercontent.com/wiseupdata/pysparkplus/main/assets/pyspark.png" width="300" />
 </a>
 
 <h1>
@@ -33,7 +33,7 @@ Pyspark extra functions ❤️
 <br>
 <br>
 <a href="https://github.com/wiseupdata/wiseupdata">
-<img align="center" alt="img" src="https://raw.githubusercontent.com/wiseupdata/pyspark-functions/main/assets/under_construction.gif" width="300" />
+<img align="center" alt="img" src="https://raw.githubusercontent.com/wiseupdata/pysparkplus/main/assets/under_construction.gif" width="300" />
 </a>
 
 <br>

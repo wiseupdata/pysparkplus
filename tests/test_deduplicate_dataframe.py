@@ -1,15 +1,12 @@
 import pytest
 from pyspark.sql import SparkSession
-from pyspark_functions.dataframe import deduplicate
+
+from pysparkplus.dataframe import deduplicate
 
 
 @pytest.fixture(scope="session")
 def spark():
-    spark = (
-        SparkSession.builder.master("local")
-        .appName("pytest-pyspark-local-testing")
-        .getOrCreate()
-    )
+    spark = SparkSession.builder.master("local").appName("pytest-pyspark-local-testing").getOrCreate()
     yield spark
     spark.stop()
 
