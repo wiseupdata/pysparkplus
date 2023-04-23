@@ -28,7 +28,7 @@ def test_deduplicate(spark, input_dataframe):
     order_by = ["order_col2"]
 
     # Act
-    actual_output_dataframe = deduplicate(input_dataframe, by_columns, order_by)
+    actual_output_dataframe = deduplicate(input_dataframe, by_columns)
 
     # Assert
     assert actual_output_dataframe.collect() == expected_output_dataframe.collect()
