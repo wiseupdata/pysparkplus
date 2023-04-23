@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pysparkplus"
-version = "0.0.2"
+version = "0.0.3"
 authors = ["wiseupdata <silvio.liborio@wiseupdata.com>"]
 readme = "README.md"
 packages = [{include = "pysparkplus"}]
