@@ -5,20 +5,19 @@ from pyspark.sql.functions import desc, row_number
 from strplus import Str
 
 
-def count_cols(df:DataFrame):
+def count_cols(df: DataFrame):
     return len(df.columns)
 
 
-def deduplicate(df: DataFrame, by_columns:  Optional[List[str] or str] = None , order_by:  Optional[List[str] or str] = None, desc_:bool = True) -> DataFrame:
-
+def deduplicate(df: DataFrame, by_columns: Optional[List[str] or str] = None, order_by: Optional[List[str] or str] = None, desc_: bool = True) -> DataFrame:
     if count_cols(df) == 1:
         # Native spark function!
         return df.distinct()
-    
-    elif order_by is None or len(order_by) ==0:
+
+    elif order_by is None or len(order_by) == 0:
         # Native spark function!
         df.dropDuplicates(subset=columns)
-        
+
     else:
         columns = Str(by_columns).split_by_sep if isinstance(by_columns, str) else by_columns
         order_by_cols = Str(order_by) if isinstance(order_by, str) else Str(",".join(order_by))
