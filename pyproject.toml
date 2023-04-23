@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pysparkplus"
-version = "0.0.2"
+version = "0.0.3"
 authors = ["wiseupdata <silvio.liborio@wiseupdata.com>"]
 readme = "README.md"
 packages = [{include = "pysparkplus"}]
@@ -21,7 +21,7 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.9"
 pyspark = "^3.4.0"
-strplus = "^1.0.6"
+strplus = "^1.0.8"
 
 
 [tool.poetry.group.dev.dependencies]
