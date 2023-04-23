@@ -2,22 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://wiseupdata.github.io/pysparkplus/index.html/</loc>
-         <lastmod>2023-04-22</lastmod>
+         <lastmod>2023-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiseupdata.github.io/pysparkplus/index.html/examples/functions_01/</loc>
-         <lastmod>2023-04-22</lastmod>
+         <lastmod>2023-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiseupdata.github.io/pysparkplus/index.html/pysparkplus/SUMMARY/</loc>
-         <lastmod>2023-04-22</lastmod>
+         <lastmod>2023-04-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiseupdata.github.io/pysparkplus/index.html/pysparkplus/functions%20copy/</loc>
+         <lastmod>2023-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiseupdata.github.io/pysparkplus/index.html/pysparkplus/functions/</loc>
-         <lastmod>2023-04-22</lastmod>
+         <lastmod>2023-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

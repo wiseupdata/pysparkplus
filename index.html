@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="https://raw.githubusercontent.com/wiseupdata/pysparkplus/main/assets/imgs/python.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
     
     
       
@@ -121,6 +121,8 @@
       <form class="md-header__option" data-md-component="palette">
         
           
+          
+          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
@@ -128,6 +130,8 @@
             </label>
           
         
+          
+          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -293,6 +297,20 @@
   
   
     <li class="md-nav__item">
+      <a href="pysparkplus/functions%20copy/" class="md-nav__link">
+        Functions copy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="pysparkplus/functions/" class="md-nav__link">
         Functions
       </a>
@@ -364,13 +382,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#pysparkplus.functions.deduplicate" class="md-nav__link">
-    deduplicate()
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -418,337 +429,6 @@
 
 
 
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="pysparkplus.functions.deduplicate" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">deduplicate</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">by_columns</span><span class="p">,</span> <span class="n">order_by</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-<a href="#pysparkplus.functions.deduplicate" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Returns a DataFrame with duplicate rows removed based on the given columns.</p>
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>df</code></td>
-          <td>
-                <code>pyspark.<span title="pyspark.sql">sql</span>.<span title="pyspark.sql.DataFrame">DataFrame</span></code>
-          </td>
-          <td><p>The input DataFrame.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>by_columns</code></td>
-          <td>
-                <code>Union[str, <span title="typing.List">List</span>[str]]</code>
-          </td>
-          <td><p>A column or list of columns to group by for deduplication.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>order_by</code></td>
-          <td>
-                <code>Optional[Union[str, <span title="typing.List">List</span>[str]]]</code>
-          </td>
-          <td><p>A column or list of columns to order by before deduplication. If not
-specified, the deduplication will be performed based on the <code>by_columns</code> parameter.</p></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><span title="pyspark.sql.DataFrame">DataFrame</span></code>
-          </td>
-          <td><p>pyspark.sql.DataFrame: A DataFrame with duplicate rows removed.</p></td>
-        </tr>
-    </tbody>
-  </table>
-      <div class="admonition example">
-<p class="admonition-title">Deduplicating a DataFrame</p>
-<p>This example shows how to use <code>deduplicate()</code> to remove duplicate rows from a DataFrame.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="pysparkplus.functions.deduplicate--__tabbed_1_1" name="pysparkplus.functions.deduplicate--__tabbed_1" type="radio" /><input id="pysparkplus.functions.deduplicate--__tabbed_1_2" name="pysparkplus.functions.deduplicate--__tabbed_1" type="radio" /><input id="pysparkplus.functions.deduplicate--__tabbed_1_3" name="pysparkplus.functions.deduplicate--__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="pysparkplus.functions.deduplicate--__tabbed_1_1">Original df</label><label for="pysparkplus.functions.deduplicate--__tabbed_1_2">Example 1</label><label for="pysparkplus.functions.deduplicate--__tabbed_1_3">Example 2</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)],</span> <span class="p">[</span><span class="s2">&quot;col1&quot;</span><span class="p">,</span> <span class="s2">&quot;col2&quot;</span><span class="p">])</span>
-<span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div>
-Output:
-<div class="highlight"><pre><span></span><code>+----+----+
-|col1|col2|
-+----+----+
-|   1|   a|
-|   2|   b|
-|   1|   a|
-|   3|   c|
-+----+----+
-</code></pre></div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code><span class="n">df_dedup</span> <span class="o">=</span> <span class="n">deduplicate</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;col1&quot;</span><span class="p">)</span>
-<span class="n">df_dedup</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div>
-Output:
-<div class="highlight"><pre><span></span><code>+----+----+
-|col1|col2|
-+----+----+
-|   1|   a|
-|   2|   b|
-|   3|   c|
-+----+----+
-</code></pre></div></p>
-</div>
-<div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code><span class="n">df_dedup</span> <span class="o">=</span> <span class="n">deduplicate</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;col1&quot;</span><span class="p">,</span> <span class="s2">&quot;col2&quot;</span><span class="p">],</span> <span class="n">order_by</span><span class="o">=</span><span class="s2">&quot;col1&quot;</span><span class="p">)</span>
-<span class="n">df_dedup</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div>
-Output:
-<div class="highlight"><pre><span></span><code>+----+----+
-|col1|col2|
-+----+----+
-|   1|   a|
-|   2|   b|
-|   3|   c|
-+----+----+
-</code></pre></div></p>
-</div>
-</div>
-</div>
-</div>
-
-<details class="info">
-  <summary>Important</summary>
-  <ul>
-<li>This function preserves the first occurrence of each unique row and removes subsequent duplicates.</li>
-<li>If there are no duplicate rows in the DataFrame, this function returns the input DataFrame unchanged.</li>
-<li>The <code>order_by</code> parameter can be used to specify a custom order for the deduplication. By default, the function
-  orders by the columns specified in the <code>by_columns</code> parameter.</li>
-<li>The input DataFrame should not contain null values, as these may cause unexpected behavior in the deduplication.</li>
-</ul>
-</details>
-      <details class="quote">
-        <summary>Source code in <code>pysparkplus/functions.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  8</span>
-<span class="normal">  9</span>
-<span class="normal"> 10</span>
-<span class="normal"> 11</span>
-<span class="normal"> 12</span>
-<span class="normal"> 13</span>
-<span class="normal"> 14</span>
-<span class="normal"> 15</span>
-<span class="normal"> 16</span>
-<span class="normal"> 17</span>
-<span class="normal"> 18</span>
-<span class="normal"> 19</span>
-<span class="normal"> 20</span>
-<span class="normal"> 21</span>
-<span class="normal"> 22</span>
-<span class="normal"> 23</span>
-<span class="normal"> 24</span>
-<span class="normal"> 25</span>
-<span class="normal"> 26</span>
-<span class="normal"> 27</span>
-<span class="normal"> 28</span>
-<span class="normal"> 29</span>
-<span class="normal"> 30</span>
-<span class="normal"> 31</span>
-<span class="normal"> 32</span>
-<span class="normal"> 33</span>
-<span class="normal"> 34</span>
-<span class="normal"> 35</span>
-<span class="normal"> 36</span>
-<span class="normal"> 37</span>
-<span class="normal"> 38</span>
-<span class="normal"> 39</span>
-<span class="normal"> 40</span>
-<span class="normal"> 41</span>
-<span class="normal"> 42</span>
-<span class="normal"> 43</span>
-<span class="normal"> 44</span>
-<span class="normal"> 45</span>
-<span class="normal"> 46</span>
-<span class="normal"> 47</span>
-<span class="normal"> 48</span>
-<span class="normal"> 49</span>
-<span class="normal"> 50</span>
-<span class="normal"> 51</span>
-<span class="normal"> 52</span>
-<span class="normal"> 53</span>
-<span class="normal"> 54</span>
-<span class="normal"> 55</span>
-<span class="normal"> 56</span>
-<span class="normal"> 57</span>
-<span class="normal"> 58</span>
-<span class="normal"> 59</span>
-<span class="normal"> 60</span>
-<span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">deduplicate</span><span class="p">(</span><span class="n">df</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">by_columns</span><span class="p">,</span> <span class="n">order_by</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-
-<span class="sd">    Returns a DataFrame with duplicate rows removed based on the given columns.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        df (pyspark.sql.DataFrame): The input DataFrame.</span>
-<span class="sd">        by_columns (Union[str, List[str]]): A column or list of columns to group by for deduplication.</span>
-<span class="sd">        order_by (Optional[Union[str, List[str]]]): A column or list of columns to order by before deduplication. If not</span>
-<span class="sd">            specified, the deduplication will be performed based on the `by_columns` parameter.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        pyspark.sql.DataFrame: A DataFrame with duplicate rows removed.</span>
-
-<span class="sd">    !!! Example &quot;Deduplicating a DataFrame&quot;</span>
-<span class="sd">        This example shows how to use `deduplicate()` to remove duplicate rows from a DataFrame.</span>
-
-<span class="sd">        === &quot;Original df&quot;</span>
-<span class="sd">            ```python</span>
-<span class="sd">            df = spark.createDataFrame([(1, &quot;a&quot;), (2, &quot;b&quot;), (1, &quot;a&quot;), (3, &quot;c&quot;)], [&quot;col1&quot;, &quot;col2&quot;])</span>
-<span class="sd">            df.show()</span>
-<span class="sd">            ```</span>
-<span class="sd">            Output:</span>
-<span class="sd">            ```</span>
-<span class="sd">            +----+----+</span>
-<span class="sd">            |col1|col2|</span>
-<span class="sd">            +----+----+</span>
-<span class="sd">            |   1|   a|</span>
-<span class="sd">            |   2|   b|</span>
-<span class="sd">            |   1|   a|</span>
-<span class="sd">            |   3|   c|</span>
-<span class="sd">            +----+----+</span>
-<span class="sd">            ```</span>
-
-<span class="sd">        === &quot;Example 1&quot;</span>
-<span class="sd">            ```python</span>
-<span class="sd">            df_dedup = deduplicate(df, &quot;col1&quot;)</span>
-<span class="sd">            df_dedup.show()</span>
-<span class="sd">            ```</span>
-<span class="sd">            Output:</span>
-<span class="sd">            ```</span>
-<span class="sd">            +----+----+</span>
-<span class="sd">            |col1|col2|</span>
-<span class="sd">            +----+----+</span>
-<span class="sd">            |   1|   a|</span>
-<span class="sd">            |   2|   b|</span>
-<span class="sd">            |   3|   c|</span>
-<span class="sd">            +----+----+</span>
-<span class="sd">            ```</span>
-
-<span class="sd">        === &quot;Example 2&quot;</span>
-<span class="sd">            ```python</span>
-<span class="sd">            df_dedup = deduplicate(df, [&quot;col1&quot;, &quot;col2&quot;], order_by=&quot;col1&quot;)</span>
-<span class="sd">            df_dedup.show()</span>
-<span class="sd">            ```</span>
-<span class="sd">            Output:</span>
-<span class="sd">            ```</span>
-<span class="sd">            +----+----+</span>
-<span class="sd">            |col1|col2|</span>
-<span class="sd">            +----+----+</span>
-<span class="sd">            |   1|   a|</span>
-<span class="sd">            |   2|   b|</span>
-<span class="sd">            |   3|   c|</span>
-<span class="sd">            +----+----+</span>
-<span class="sd">            ```</span>
-
-<span class="sd">    Info: Important</span>
-<span class="sd">        - This function preserves the first occurrence of each unique row and removes subsequent duplicates.</span>
-<span class="sd">        - If there are no duplicate rows in the DataFrame, this function returns the input DataFrame unchanged.</span>
-<span class="sd">        - The `order_by` parameter can be used to specify a custom order for the deduplication. By default, the function</span>
-<span class="sd">          orders by the columns specified in the `by_columns` parameter.</span>
-<span class="sd">        - The input DataFrame should not contain null values, as these may cause unexpected behavior in the deduplication.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">order_by</span> <span class="o">=</span> <span class="n">by_columns</span> <span class="k">if</span> <span class="n">order_by</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">order_by</span>
-
-    <span class="n">order_by</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="n">order_by</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">order_by</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">order_by</span>
-
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
-
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">order_by</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">order_by</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">order_by</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="n">order_by</span>
-
-        <span class="c1"># Create a window specification to partition by key columns and order by order columns in descending order</span>
-        <span class="n">window_spec</span> <span class="o">=</span> <span class="n">Window</span><span class="o">.</span><span class="n">partitionBy</span><span class="p">(</span><span class="n">by_columns</span><span class="p">)</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="n">order_by</span><span class="p">))</span>
-
-        <span class="c1"># Add a new column called &quot;row_num&quot; to the DataFrame based on the window specification</span>
-        <span class="n">df_num</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;row_num&quot;</span><span class="p">,</span> <span class="n">row_number</span><span class="p">()</span><span class="o">.</span><span class="n">over</span><span class="p">(</span><span class="n">window_spec</span><span class="p">))</span>
-
-        <span class="c1"># Filter the DataFrame to keep only rows where the &quot;row_num&quot; column equals 1</span>
-        <span class="n">df_dedup</span> <span class="o">=</span> <span class="n">df_num</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">df_num</span><span class="o">.</span><span class="n">row_num</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="n">df_dedup</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;row_num&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-      </details>
-  </div>
-
-</div>
 
 
 

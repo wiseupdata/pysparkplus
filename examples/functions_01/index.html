@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="https://raw.githubusercontent.com/wiseupdata/pysparkplus/main/assets/imgs/python.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
     
     
       
@@ -123,6 +123,8 @@
       <form class="md-header__option" data-md-component="palette">
         
           
+          
+          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
@@ -130,6 +132,8 @@
             </label>
           
         
+          
+          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -288,6 +292,20 @@
           package
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pysparkplus/functions%20copy/" class="md-nav__link">
+        Functions copy
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -1541,7 +1559,7 @@ pyenv virtualenv-delete -f .envPysparkPlus
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1578,9 +1596,16 @@ pyenv virtualenv-delete -f .envPysparkPlus
 
 
 <div class="jp-RenderedText jp-OutputArea-output pysparkplus" data-mime-type="text/plain">
-<pre>Requirement already satisfied: pysparkplus in /home/silvio/.pyenv/versions/3.9.16/envs/.envPysparkPlus/lib/python3.9/site-packages (0.0.2)
-Requirement already satisfied: pyspark&lt;4.0.0,&gt;=3.4.0 in /home/silvio/.pyenv/versions/3.9.16/envs/.envPysparkPlus/lib/python3.9/site-packages (from pysparkplus) (3.4.0)
-Requirement already satisfied: py4j==0.10.9.7 in /home/silvio/.pyenv/versions/3.9.16/envs/.envPysparkPlus/lib/python3.9/site-packages (from pyspark&lt;4.0.0,&gt;=3.4.0-&gt;pysparkplus) (0.10.9.7)
+<pre>Collecting pysparkplus
+  Downloading pysparkplus-0.0.3-py3-none-any.whl (4.0 kB)
+Collecting pyspark&lt;4.0.0,&gt;=3.4.0 (from pysparkplus)
+  Using cached pyspark-3.4.0-py2.py3-none-any.whl
+Collecting strplus&lt;2.0.0,&gt;=1.0.6 (from pysparkplus)
+  Downloading strplus-1.0.8-py3-none-any.whl (9.8 kB)
+Collecting py4j==0.10.9.7 (from pyspark&lt;4.0.0,&gt;=3.4.0-&gt;pysparkplus)
+  Using cached py4j-0.10.9.7-py2.py3-none-any.whl (200 kB)
+Installing collected packages: py4j, strplus, pyspark, pysparkplus
+Successfully installed py4j-0.10.9.7 pyspark-3.4.0 pysparkplus-0.0.3 strplus-1.0.8
 Note: you may need to restart the kernel to use updated packages.
 </pre>
 </div>
@@ -1597,7 +1622,7 @@ Note: you may need to restart the kernel to use updated packages.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1637,11 +1662,11 @@ spark = SparkSession.builder.appName("testPysparkPlus").getOrCreate()</div>
 
 <div class="jp-RenderedText jp-OutputArea-output pysparkplus" data-mime-type="application/vnd.jupyter.stderr">
 <pre>your 131072x1 screen size is bogus. expect trouble
-23/04/22 14:05:11 WARN Utils: Your hostname, DESKTOP-O03M3NM resolves to a loopback address: 127.0.1.1; using 172.17.155.166 instead (on interface eth0)
-23/04/22 14:05:11 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/04/23 17:26:48 WARN Utils: Your hostname, DESKTOP-O03M3NM resolves to a loopback address: 127.0.1.1; using 172.17.155.166 instead (on interface eth0)
+23/04/23 17:26:48 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
 Setting default log level to &#34;WARN&#34;.
 To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
-23/04/22 14:05:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/04/23 17:26:50 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 </pre>
 </div>
 </div>
@@ -1668,7 +1693,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1700,7 +1725,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1770,7 +1795,7 @@ df.show()</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1808,6 +1833,15 @@ df_dedup.show()</div>
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output pysparkplus" data-mime-type="application/vnd.jupyter.stderr">
+<pre>[Stage 3:============================================&gt;              (6 + 2) / 8]</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
 <div class="jp-RenderedText jp-OutputArea-output pysparkplus" data-mime-type="text/plain">
 <pre>+----+
 |name|
@@ -1816,6 +1850,15 @@ df_dedup.show()</div>
 +----+
 
 </pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output pysparkplus" data-mime-type="application/vnd.jupyter.stderr">
+<pre>                                                                                </pre>
 </div>
 </div>
 
@@ -1830,7 +1873,7 @@ df_dedup.show()</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1891,7 +1934,7 @@ df_two_cols.show()</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1951,7 +1994,7 @@ df_two_dedup.show()</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2011,7 +2054,7 @@ df_two_dedup.show()</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2074,7 +2117,7 @@ df.show()</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2136,7 +2179,7 @@ df_dedup.show()</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -2198,7 +2241,7 @@ df_dedup.show()</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
