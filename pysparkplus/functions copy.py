@@ -5,14 +5,13 @@ from pyspark.sql.functions import desc, row_number
 from strplus import Str
 
 
-def deduplicate(df: DataFrame, columns = None) -> DataFrame:
-  
-        return df.dropDuplicates(subset=columns)
+def deduplicate(df: DataFrame, columns=None) -> DataFrame:
+    return df.dropDuplicates(subset=columns)
 
 
 def deduplicate_order_by(df: DataFrame, by_columns, order_by) -> DataFrame:
     """
-    
+
     Returns a DataFrame with duplicate rows removed based on the given columns.
 
     Args:
