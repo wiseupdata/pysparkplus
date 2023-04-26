@@ -3,6 +3,7 @@ from typing import List, Optional
 from pyspark.sql import DataFrame, Window
 from pyspark.sql.functions import desc, row_number
 from strplus import Str
+from strplus.functions import split_by_separator
 
 
 def count_cols(df: DataFrame):
@@ -92,11 +93,11 @@ def deduplicate(df: DataFrame, by_columns: Optional[List[str] or str] = None, or
         df.dropDuplicates(subset=columns)
 
     else:
-        columns = Str(by_columns).split_by_sep if isinstance(by_columns, str) else by_columns
-        order_by_cols = Str(order_by) if isinstance(order_by, str) else Str(",".join(order_by))
+        columns = split_by_separator(by_columns, type_constraint=False)
+        order_by_cols = Str.cast(order_by)
 
         # Create a window specification to partition by key columns and order by order columns in descending order
-        window_spec = Window.partitionBy(by_columns).orderBy(desc(order_by_cols.sep_to_comma))
+        window_spec = Window.partitionBy(columns).orderBy(desc(order_by_cols.separator_as_comma))
 
         # Add a new column called "row_num" to the DataFrame based on the window specification
         df_num = df.withColumn("row_num", row_number().over(window_spec))

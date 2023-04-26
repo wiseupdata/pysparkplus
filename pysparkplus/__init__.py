@@ -1,5 +1,5 @@
 __title__ = "pysparkplus"
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 __license__ = "MIT"
 __author__ = "SilvioLiborio"
 __copyright__ = "Copyright 2023 WiseUpData"
