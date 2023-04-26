@@ -1,5 +1,6 @@
 from typing import List, Optional
 
+import pyspark.sql.functions as F
 from pyspark.sql import DataFrame, Window
 from pyspark.sql.functions import desc, row_number
 from strplus import Str
@@ -106,3 +107,10 @@ def deduplicate(df: DataFrame, by_columns: Optional[List[str] or str] = None, or
         df_dedup = df_num.filter(df_num.row_num == 1)
 
         return df_dedup.drop("row_num")
+
+
+def get_duplicated_rows(df: DataFrame, by_columns: Optional[List[str] or str] = None):
+    columns: List[str] = split_by_separator(input_string=by_columns, type_constraint=False)
+    columns: List[F.col] = [F.col(c) for c in columns]
+    result: DataFrame(jdf, sql_ctx) = df.groupBy(columns).agg(F.count("*").alias("count"))
+    return result
